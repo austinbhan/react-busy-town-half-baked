@@ -1,7 +1,7 @@
 import './App.css';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
-import useState from 'react';
+import { useState } from 'react';
 
 function App() {
   // track the following state with a few useState hooks:
@@ -9,6 +9,8 @@ function App() {
   // lizardSize should be a number that starts out as 10
   // alienSize should be a number that starts out as 10
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
+  const [lightColor, setLightColor] = useState('red');
+
 
   return (
     <div className="App">
@@ -37,7 +39,7 @@ function App() {
       <TrafficLight color={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
-        <button>Red</button>
+        <button onClick={() => setLightColor('red')}>Red</button>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
         <button>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
