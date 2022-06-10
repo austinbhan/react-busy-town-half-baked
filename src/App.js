@@ -12,9 +12,21 @@ function App() {
   const [lightColor, setLightColor] = useState('red');
   const [alienSize, setAlienSize] = useState(10);
   const [lizardSize, setLizardSize] = useState(10);
-  // const [] = useState();
+  const [vehicleArray, setVehicleArray] = useState(['car', 'truck', 'bus', 'motorcycle']);
 
+  function handleCar() {
+    setVehicleArray([...vehicleArray, 'car']);
+  }
 
+  function handleTruck() {
+    setVehicleArray([...vehicleArray, 'truck']);
+  }
+  function handleBus() {
+    setVehicleArray([...vehicleArray, 'bus']);
+  }
+  function handleMotorcycle() {
+    setVehicleArray([...vehicleArray, 'motorcycle']);
+  }
 
 
   return (
@@ -55,17 +67,17 @@ function App() {
       This prop should be an array of strings like ['car', 'truck', 'truck', 'car', 'bus'].
       Do you have something like that in state that you could pass as a vehicles prop? 
       */}
-      <VehicleList />
+      <VehicleList vehicles={vehicleArray} />
       <div className='buttons'>
         {/* This part is weird */}
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'car' to the end */}
-        <button>Car</button>
+        <button onClick={handleCar}>Car</button>
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'bus' to the end */}
-        <button>Bus</button>
+        <button onClick={handleBus}>Bus</button>
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'truck' to the end */}
-        <button>Truck</button>
+        <button onClick={handleTruck}>Truck</button>
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'motorcycle' to the end */}
-        <button>Motorcycle</button>
+        <button onClick={handleMotorcycle}>Motorcycle</button>
       </div>
 
     </div>

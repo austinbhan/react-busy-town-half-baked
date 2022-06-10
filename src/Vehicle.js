@@ -4,6 +4,6 @@ export default function Vehicle({ vehicle }) {
     { vehicle === 'car' && '🚗'}
     { vehicle === 'truck' && '🚚'}
     { vehicle === 'bus' && '🚌'}
-    { vehicle === 'motocrycle' && '🏍️'}
+    { vehicle === 'motorcycle' && '🏍️'}
   </div>;
 }
