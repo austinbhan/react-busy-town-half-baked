@@ -12,8 +12,8 @@ function App() {
   const [lightColor, setLightColor] = useState('red');
   const [alienSize, setAlienSize] = useState(10);
   const [lizardSize, setLizardSize] = useState(10);
+  // const [] = useState();
 
-  
 
 
 
